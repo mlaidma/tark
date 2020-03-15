@@ -1,7 +1,11 @@
 project('tark', 'cpp')
 
-src = ['main.cpp']
+inc = []
+src = ['main.cc']
+
+subdir('utils')
 
 executable('tark',
-    src
+    src,
+    include_directories : inc,
 )
